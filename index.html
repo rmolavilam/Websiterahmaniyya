@@ -1722,6 +1722,41 @@ img {
         transform: none;
     }
 }
+   /* WHATSAPP BUTTON FOR EACH TEACHER */
+
+.teacher-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 16px;
+    padding: 10px 17px;
+    background: #25D366;
+    color: #ffffff;
+    border-radius: 7px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.teacher-whatsapp:hover {
+    background: #128C4E;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.25);
+}
+
+.teacher-whatsapp span {
+    font-size: 17px;
+    line-height: 1;
+}
+
+.teacher-card .teacher-whatsapp {
+    position: relative;
+    z-index: 2;
+   }
 </style>
 </head>
 
@@ -2247,6 +2282,15 @@ img {
                <img src="Screenshot_20260809-194909_Gallery.jpg"
                 <h3>Muhammed Sahal</h3>
                 <p>Usthad</p>
+                   <a
+        class="teacher-whatsapp"
+        href="https://wa.me/9995611785?text=Assalamu%20Alaikum%20Usthad%2C%20I%20am%20a%20parent%20of%20a%20student%20at%20Rahmaniyya%20Madrasa."
+        target="_blank"
+        rel="noopener">
+        <span>☏</span> WhatsApp
+    </a>
+            
+           
             </article>
 
             <!-- TEACHER 4 -->
