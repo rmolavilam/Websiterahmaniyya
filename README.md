@@ -1,0 +1,2804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rahmaniyya Higher Secondary Madrasa | Olavilam</title>
+
+<meta name="description" content="Welcome to Rahmaniyya Higher Secondary Madrasa, Olavilam. Established in 1959, dedicated to Islamic education, character development and academic excellence.">
+
+<meta name="theme-color" content="#075c3b">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* =====================================================
+   RAHMANIYYA MADRASA — COMPLETE WEBSITE
+   Edit this file to customize the entire website.
+===================================================== */
+
+:root {
+    --green: #075c3b;
+    --green-dark: #043e29;
+    --green-light: #eaf5ee;
+    --gold: #d6b46a;
+    --gold-dark: #b89445;
+    --white: #ffffff;
+    --cream: #faf9f4;
+    --text: #26352d;
+    --muted: #718078;
+    --border: #e4eae5;
+    --shadow: 0 15px 45px rgba(10, 58, 37, 0.09);
+    --radius: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: min(1160px, 91%);
+    margin: auto;
+}
+
+.section {
+    padding: 95px 0;
+}
+
+.section-soft {
+    background: var(--cream);
+}
+
+.section-green {
+    background: var(--green);
+    color: var(--white);
+}
+
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 14px;
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.eyebrow::before,
+.eyebrow::after {
+    content: "";
+    width: 20px;
+    height: 2px;
+    background: var(--gold);
+}
+
+.section-heading h2,
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.2;
+    color: var(--green-dark);
+    margin-bottom: 17px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 15px;
+    max-width: 650px;
+    margin: auto;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 13px 22px;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 13px;
+    border: 1px solid transparent;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--green);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--green-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(7, 92, 59, 0.22);
+}
+
+.btn-outline {
+    border-color: rgba(255,255,255,0.65);
+    color: var(--white);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: var(--white);
+    color: var(--green);
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: var(--green-dark);
+}
+
+.btn-gold:hover {
+    background: #e6ca86;
+    transform: translateY(-3px);
+}
+
+.topbar {
+    background: var(--green-dark);
+    color: rgba(255,255,255,0.9);
+    font-size: 11px;
+    padding: 9px 0;
+}
+
+.topbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.topbar-left,
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.topbar a:hover {
+    color: var(--gold);
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(7,92,59,0.09);
+    transition: box-shadow 0.3s ease;
+}
+
+.site-header.scrolled {
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+.nav-inner {
+    min-height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.brand-mark {
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    background: var(--green);
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.brand-text {
+    min-width: 0;
+}
+
+.brand-text strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--green-dark);
+    line-height: 1.25;
+}
+
+.brand-text span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 1.3px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    position: relative;
+    font-size: 12px;
+    font-weight: 700;
+    color: #39483f;
+    padding: 10px 0;
+    transition: color 0.2s;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 0;
+    height: 2px;
+    background: var(--gold-dark);
+    transition: width 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--green);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-cta {
+    white-space: nowrap;
+    padding: 11px 17px;
+}
+
+.menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    background: var(--green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* HERO */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    background:
+        linear-gradient(90deg, rgba(2,35,23,0.92) 0%, rgba(3,57,36,0.83) 48%, rgba(3,57,36,0.42) 100%),
+        url("https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=2000&q=85")
+        center/cover no-repeat;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.13;
+    pointer-events: none;
+    background-image:
+        radial-gradient(circle at 1px 1px, rgba(255,255,255,.6) 1px, transparent 0);
+    background-size: 25px 25px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    padding: 100px 0 125px;
+    animation: heroReveal 0.9s ease both;
+}
+
+.hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(214,180,106,0.65);
+    background: rgba(255,255,255,0.06);
+    padding: 9px 15px;
+    border-radius: 30px;
+    color: #f0d89d;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+    margin-bottom: 26px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6.4vw, 76px);
+    line-height: 1.09;
+    letter-spacing: -1.4px;
+    max-width: 780px;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero-description {
+    max-width: 610px;
+    color: rgba(255,255,255,0.82);
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 31px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.hero-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background: rgba(2,35,23,0.76);
+    border-top: 1px solid rgba(255,255,255,0.14);
+}
+
+.hero-bottom-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.hero-info {
+    padding: 21px 20px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    border-right: 1px solid rgba(255,255,255,0.13);
+}
+
+.hero-info:last-child {
+    border-right: none;
+}
+
+.hero-info-icon {
+    font-size: 25px;
+    color: var(--gold);
+}
+
+.hero-info strong {
+    display: block;
+    font-size: 13px;
+    color: white;
+}
+
+.hero-info span {
+    display: block;
+    color: rgba(255,255,255,0.67);
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+/* INTRO STRIP */
+
+.intro-strip {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.intro-strip-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.intro-item {
+    padding: 27px 20px;
+    text-align: center;
+    border-right: 1px solid var(--border);
+}
+
+.intro-item:last-child {
+    border-right: none;
+}
+
+.intro-item strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    color: var(--green);
+    font-size: 24px;
+}
+
+.intro-item span {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* ABOUT */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+    align-items: center;
+}
+
+.about-visual {
+    position: relative;
+    padding: 0 20px 25px 0;
+}
+
+.about-image {
+    min-height: 450px;
+    border-radius: 14px;
+    overflow: hidden;
+    background:
+        linear-gradient(180deg, rgba(4,62,41,0.02), rgba(4,62,41,0.15)),
+        url("https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=1100&q=85")
+        center/cover no-repeat;
+}
+
+.about-badge {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 190px;
+    padding: 22px;
+    background: var(--green);
+    color: white;
+    border: 5px solid white;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.about-badge strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    color: var(--gold);
+    line-height: 1.2;
+}
+
+.about-badge span {
+    display: block;
+    font-size: 11px;
+    margin-top: 7px;
+}
+
+.about-copy .eyebrow {
+    margin-bottom: 16px;
+}
+
+.about-copy h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--green-dark);
+    font-size: clamp(32px, 4vw, 44px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.about-copy p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.about-points {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 13px;
+    margin: 24px 0 29px;
+}
+
+.about-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--green-dark);
+}
+
+.check-icon {
+    flex-shrink: 0;
+    width: 23px;
+    height: 23px;
+    display: grid;
+    place-items: center;
+    background: var(--green-light);
+    color: var(--green);
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+/* MISSION */
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.mission-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 31px 27px;
+    transition: 0.3s ease;
+}
+
+.mission-card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow);
+    border-color: #b9d7c5;
+}
+
+.mission-icon {
+    width: 57px;
+    height: 57px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: var(--green-light);
+    color: var(--green);
+    font-size: 26px;
+    margin-bottom: 23px;
+}
+
+.mission-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--green-dark);
+    margin-bottom: 11px;
+}
+
+.mission-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* MESSAGE */
+
+.message-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.5fr;
+    gap: 42px;
+    align-items: center;
+}
+
+.message-photo {
+    min-height: 330px;
+    border-radius: 14px;
+    background:
+        linear-gradient(180deg, rgba(4,62,41,.03), rgba(4,62,41,.15)),
+        url("https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80")
+        center/cover no-repeat;
+    position: relative;
+}
+
+.photo-label {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    background: rgba(4,62,41,.92);
+    color: white;
+    padding: 15px;
+    border-radius: 9px;
+}
+
+.photo-label strong {
+    display: block;
+    font-size: 14px;
+}
+
+.photo-label span {
+    display: block;
+    font-size: 11px;
+    color: #d8e5dc;
+    margin-top: 3px;
+}
+
+.message-copy h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 39px);
+    color: var(--green-dark);
+    line-height: 1.25;
+    margin-bottom: 19px;
+}
+
+.message-copy p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.quote-mark {
+    color: var(--gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 65px;
+    line-height: 0.8;
+}
+
+/* ACADEMICS */
+
+.academic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.academic-card {
+    padding: 29px 26px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: white;
+    transition: 0.3s;
+}
+
+.academic-card:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-5px);
+}
+
+.academic-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    color: #d8e8dc;
+    font-weight: 700;
+}
+
+.academic-card h3 {
+    color: var(--green-dark);
+    font-size: 19px;
+    margin: 5px 0 12px;
+}
+
+.academic-card p {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.academic-tag {
+    display: inline-block;
+    margin-top: 17px;
+    padding: 6px 10px;
+    border-radius: 30px;
+    background: var(--green-light);
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+
+/* LEADERSHIP */
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.person-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.person-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+}
+
+.person-image {
+    height: 235px;
+    background: #eaf1eb;
+    position: relative;
+    overflow: hidden;
+}
+
+.person-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.person-card:hover .person-image img {
+    transform: scale(1.05);
+}
+
+.person-placeholder {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--green);
+    font-size: 64px;
+    background:
+        radial-gradient(circle at center, #ffffff 0%, #e6f1e9 100%);
+}
+
+.person-info {
+    padding: 22px;
+    text-align: center;
+}
+
+.person-info h3 {
+    color: var(--green-dark);
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.person-info p {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.person-role {
+    display: inline-block;
+    background: var(--green-light);
+    color: var(--green);
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 800;
+    margin-top: 12px;
+}
+
+/* TEACHERS */
+
+.teacher-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 19px;
+}
+
+.teacher-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 24px 16px;
+    text-align: center;
+    transition: .3s;
+}
+
+.teacher-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.teacher-avatar {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background: var(--green-light);
+    border: 3px solid white;
+    outline: 1px solid #c5ddcd;
+    margin: 0 auto 17px;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    font-size: 36px;
+    color: var(--green);
+}
+
+.teacher-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.teacher-card h3 {
+    color: var(--green-dark);
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.teacher-card p {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* GALLERY */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+}
+
+.gallery-item {
+    position: relative;
+    min-height: 250px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: var(--green-light);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    min-height: 250px;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.07);
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 22px;
+    background: linear-gradient(transparent 20%, rgba(0,35,22,.88));
+    color: white;
+}
+
+.gallery-overlay span {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.gallery-overlay h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    margin-top: 5px;
+}
+
+/* GALLERY LIGHTBOX */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    background: rgba(0,0,0,.92);
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.lightbox.open {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 95%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: white;
+    border: none;
+    background: transparent;
+    font-size: 38px;
+}
+
+/* ACHIEVEMENTS */
+
+.stats-section {
+    background:
+        linear-gradient(90deg, rgba(3,51,33,.96), rgba(4,75,47,.94)),
+        url("https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=1500&q=80")
+        center/cover;
+    color: white;
+    padding: 70px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    text-align: center;
+}
+
+.stat-item {
+    padding: 15px;
+    border-right: 1px solid rgba(255,255,255,.17);
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-item strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 4vw, 43px);
+    color: var(--gold);
+    line-height: 1.3;
+}
+
+.stat-item span {
+    font-size: 12px;
+    color: rgba(255,255,255,.8);
+}
+
+/* CONTACT */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 35px;
+    align-items: stretch;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 21px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: white;
+}
+
+.contact-icon {
+    flex-shrink: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-size: 21px;
+    background: var(--green-light);
+    color: var(--green);
+}
+
+.contact-card h3 {
+    font-size: 14px;
+    color: var(--green-dark);
+    margin-bottom: 4px;
+}
+
+.contact-card p,
+.contact-card a {
+    color: var(--muted);
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+.contact-card a:hover {
+    color: var(--green);
+}
+
+.map-container {
+    min-height: 430px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: #eaf2ec;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+    border: 0;
+}
+
+/* CONTACT CTA */
+
+.cta-banner {
+    background: var(--green);
+    color: white;
+    border-radius: 18px;
+    padding: 43px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-banner::after {
+    content: "۞";
+    position: absolute;
+    right: 32%;
+    top: -70px;
+    font-size: 230px;
+    line-height: 1;
+    color: rgba(255,255,255,.045);
+    pointer-events: none;
+}
+
+.cta-banner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(25px, 3vw, 36px);
+    line-height: 1.25;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-banner p {
+    color: rgba(255,255,255,.76);
+    font-size: 13px;
+    max-width: 580px;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+/* FOOTER */
+
+.site-footer {
+    background: #032c1d;
+    color: white;
+    padding: 65px 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.35fr .8fr 1fr;
+    gap: 45px;
+    padding-bottom: 45px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.footer-brand .brand-mark {
+    background: transparent;
+}
+
+.footer-brand strong {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+}
+
+.footer-brand span {
+    display: block;
+    font-size: 10px;
+    color: #b4c7bb;
+    margin-top: 3px;
+}
+
+.footer-about {
+    color: #b4c7bb;
+    font-size: 12px;
+    line-height: 1.9;
+    max-width: 360px;
+}
+
+.footer-column h3 {
+    color: var(--gold);
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.footer-links a {
+    color: #c0d0c6;
+    font-size: 12px;
+    transition: .2s;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+    padding-left: 4px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.12);
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    color: #a4b8aa;
+    font-size: 11px;
+}
+
+.footer-bottom a {
+    color: var(--gold);
+}
+
+/* FLOATING BUTTONS */
+
+.floating-buttons {
+    position: fixed;
+    right: 18px;
+    bottom: 20px;
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.float-btn {
+    width: 47px;
+    height: 47px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.2);
+    transition: .25s;
+}
+
+.float-btn:hover {
+    transform: translateY(-4px) scale(1.05);
+}
+
+.float-instagram {
+    background: #c13584;
+}
+
+.float-location {
+    background: var(--green);
+}
+
+/* BACK TO TOP */
+
+.back-to-top {
+    position: fixed;
+    left: 18px;
+    bottom: 20px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--green-dark);
+    font-size: 21px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.15);
+    display: none;
+    z-index: 900;
+}
+
+.back-to-top.visible {
+    display: grid;
+    place-items: center;
+}
+
+/* SCROLL ANIMATIONS */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes heroReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE TABLET */
+
+@media (max-width: 1000px) {
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .nav-cta {
+        display: none;
+    }
+
+    .about-grid {
+        gap: 38px;
+    }
+
+    .teacher-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* RESPONSIVE MOBILE */
+
+@media (max-width: 760px) {
+    .container {
+        width: 90%;
+    }
+
+    .section {
+        padding: 68px 0;
+    }
+
+    .topbar {
+        font-size: 10px;
+    }
+
+    .topbar-inner {
+        justify-content: center;
+    }
+
+    .topbar-left {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .topbar-right {
+        display: none;
+    }
+
+    .nav-inner {
+        min-height: 73px;
+        gap: 12px;
+    }
+
+    .brand-mark {
+        width: 42px;
+        height: 42px;
+        font-size: 21px;
+    }
+
+    .brand-text strong {
+        font-size: 15px;
+    }
+
+    .brand-text span {
+        font-size: 8px;
+        letter-spacing: .8px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-shrink: 0;
+    }
+
+    .nav-links {
+        display: flex;
+        position: fixed;
+        top: 73px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: calc(100dvh - 73px);
+        padding: 25px 7% 45px;
+        background: white;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 0;
+        overflow-y: auto;
+        transform: translateX(100%);
+        transition: transform .3s ease;
+        z-index: 1001;
+        visibility: hidden;
+    }
+
+    .nav-links.open {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    .nav-links li {
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 17px 0;
+        font-size: 15px;
+        color: var(--green-dark);
+    }
+
+    .nav-links a::after {
+        display: none;
+    }
+
+    .nav-links .mobile-contact {
+        display: block;
+        margin-top: 20px;
+        background: var(--green);
+        color: white;
+        border-radius: 7px;
+        padding: 14px 18px;
+        text-align: center;
+    }
+
+    .hero {
+        min-height: 700px;
+        background-position: 58% center;
+    }
+
+    .hero-content {
+        padding: 85px 0 185px;
+    }
+
+    .hero h1 {
+        font-size: clamp(40px, 10vw, 58px);
+        letter-spacing: -.7px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-label {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .hero-bottom-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-info {
+        padding: 12px 5%;
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,.1);
+        gap: 12px;
+    }
+
+    .hero-info-icon {
+        font-size: 20px;
+    }
+
+    .hero-info strong {
+        font-size: 12px;
+    }
+
+    .hero-info span {
+        font-size: 10px;
+    }
+
+    .intro-strip-inner {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .intro-item {
+        padding: 20px 6px;
+    }
+
+    .intro-item strong {
+        font-size: 20px;
+    }
+
+    .intro-item span {
+        font-size: 9px;
+    }
+
+    .about-grid,
+    .message-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .about-visual {
+        padding-right: 10px;
+    }
+
+    .about-image {
+        min-height: 340px;
+    }
+
+    .about-badge {
+        width: 150px;
+        padding: 15px;
+    }
+
+    .about-badge strong {
+        font-size: 28px;
+    }
+
+    .about-copy h2 {
+        font-size: 34px;
+    }
+
+    .about-points {
+        gap: 14px 10px;
+    }
+
+    .about-point {
+        font-size: 11px;
+    }
+
+    .mission-grid,
+    .academic-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .mission-card {
+        padding: 25px;
+    }
+
+    .message-photo {
+        min-height: 310px;
+    }
+
+    .leadership-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 13px;
+    }
+
+    .person-image {
+        height: 180px;
+    }
+
+    .person-info {
+        padding: 17px 10px;
+    }
+
+    .person-info h3 {
+        font-size: 14px;
+    }
+
+    .person-info p {
+        font-size: 10px;
+    }
+
+    .teacher-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 13px;
+    }
+
+    .teacher-card {
+        padding: 20px 10px;
+    }
+
+    .teacher-avatar {
+        width: 70px;
+        height: 70px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 11px;
+    }
+
+    .gallery-item,
+    .gallery-item img {
+        min-height: 175px;
+    }
+
+    .gallery-overlay {
+        padding: 12px;
+    }
+
+    .gallery-overlay h3 {
+        font-size: 15px;
+    }
+
+    .gallery-overlay span {
+        font-size: 8px;
+    }
+
+    .stats-section {
+        padding: 48px 0;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 10px;
+    }
+
+    .stat-item {
+        border-right: none;
+        padding: 12px 5px;
+    }
+
+    .stat-item:nth-child(odd) {
+        border-right: 1px solid rgba(255,255,255,.15);
+    }
+
+    .stat-item strong {
+        font-size: 32px;
+    }
+
+    .stat-item span {
+        font-size: 10px;
+    }
+
+    .map-container,
+    .map-container iframe {
+        min-height: 340px;
+    }
+
+    .cta-banner {
+        padding: 29px 23px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 23px;
+    }
+
+    .cta-banner::after {
+        right: -15px;
+        top: -35px;
+        font-size: 150px;
+    }
+
+    .cta-actions {
+        width: 100%;
+    }
+
+    .cta-actions .btn {
+        flex: 1;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px 20px;
+    }
+
+    .footer-main {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 7px;
+        font-size: 10px;
+    }
+
+    .floating-buttons {
+        right: 12px;
+        bottom: 14px;
+        gap: 8px;
+    }
+
+    .float-btn {
+        width: 43px;
+        height: 43px;
+        font-size: 18px;
+    }
+
+    .back-to-top {
+        left: 12px;
+        bottom: 14px;
+        width: 39px;
+        height: 39px;
+    }
+}
+
+@media (max-width: 380px) {
+    .brand-text strong {
+        font-size: 13px;
+    }
+
+    .brand-text span {
+        font-size: 7px;
+    }
+
+    .hero h1 {
+        font-size: 37px;
+    }
+
+    .hero-actions .btn {
+        padding: 12px 14px;
+        font-size: 11px;
+    }
+
+    .gallery-item,
+    .gallery-item img {
+        min-height: 145px;
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP INFORMATION BAR -->
+<div class="topbar">
+    <div class="container topbar-inner">
+        <div class="topbar-left">
+            <span>📍 Olavilam, Kerala</span>
+            <span>✦ SKIMVB Reg. No. 1126</span>
+        </div>
+
+        <div class="topbar-right">
+            <a href="https://www.instagram.com/rahmaniya1126/" target="_blank" rel="noopener">
+                Instagram ↗
+            </a>
+            <span>Established 1959</span>
+        </div>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+
+        <a class="brand" href="#home" aria-label="Rahmaniyya Madrasa Home">
+            <div class="brand-mark">R</div>
+            <div class="brand-text">
+                <strong>RAHMANIYYA</strong>
+                <span>Higher Secondary Madrasa</span>
+            </div>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav aria-label="Main navigation">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#academics">Academics</a></li>
+                <li><a href="#committee">Committee</a></li>
+                <li><a href="#teachers">Teachers</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+                <li>
+                    <a class="mobile-contact"
+                       href="https://www.instagram.com/rahmaniya1126/"
+                       target="_blank" rel="noopener">
+                        Connect With Us ↗
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <a href="#contact" class="btn btn-primary nav-cta">
+            Get in Touch ↗
+        </a>
+
+    </div>
+</header>
+
+<main>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+
+            <div class="hero-label">
+                <span>✦</span>
+                Knowledge · Faith · Character
+            </div>
+
+            <h1>
+                Nurturing Faith.<br>
+                Inspiring <span>Knowledge.</span>
+            </h1>
+
+            <p class="hero-description">
+                Welcome to Rahmaniyya Higher Secondary Madrasa, Olavilam.
+                A place where Islamic values, meaningful education and
+                character development come together to guide the next generation.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#about" class="btn btn-gold">
+                    Discover Rahmaniyya →
+                </a>
+
+                <a href="#academics" class="btn btn-outline">
+                    Explore Academics
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-bottom">
+        <div class="container hero-bottom-inner">
+
+            <div class="hero-info">
+                <div class="hero-info-icon">☪</div>
+                <div>
+                    <strong>Islamic Education</strong>
+                    <span>Knowledge guided by faith and values</span>
+                </div>
+            </div>
+
+            <div class="hero-info">
+                <div class="hero-info-icon">✦</div>
+                <div>
+                    <strong>Established in 1959</strong>
+                    <span>A legacy of learning and service</span>
+                </div>
+            </div>
+
+            <div class="hero-info">
+                <div class="hero-info-icon">⌂</div>
+                <div>
+                    <strong>Olavilam, Kerala</strong>
+                    <span>Serving our community with dedication</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- QUICK FACTS -->
+<div class="intro-strip">
+    <div class="container intro-strip-inner">
+
+        <div class="intro-item">
+            <strong>1959</strong>
+            <span>Year Established</span>
+        </div>
+
+        <div class="intro-item">
+            <strong>1–11</strong>
+            <span>Classes Offered</span>
+        </div>
+
+        <div class="intro-item">
+            <strong>1126</strong>
+            <span>SKIMVB Registration</span>
+        </div>
+
+    </div>
+</div>
+
+<!-- ABOUT SECTION -->
+<section class="section" id="about">
+    <div class="container about-grid">
+
+        <div class="about-visual reveal">
+            <div class="about-image"></div>
+
+            <div class="about-badge">
+                <strong>1959</strong>
+                <span>Decades of educational service</span>
+            </div>
+        </div>
+
+        <div class="about-copy reveal">
+
+            <div class="eyebrow">Who We Are</div>
+
+            <h2>A Tradition of Knowledge, Faith and Character</h2>
+
+            <p>
+                Rahmaniyya Higher Secondary Madrasa, situated in Olavilam,
+                Kerala, is dedicated to nurturing students through Islamic
+                education, moral development and a meaningful learning experience.
+            </p>
+
+            <p>
+                Established on 9 November 1959, our institution continues
+                its educational journey with a commitment to knowledge,
+                discipline, good character and service to the community.
+            </p>
+
+            <p>
+                We believe education is not merely the acquisition of
+                information, but also the development of responsible,
+                compassionate and principled individuals.
+            </p>
+
+            <div class="about-points">
+                <div class="about-point">
+                    <span class="check-icon">✓</span>
+                    <span>Islamic Values</span>
+                </div>
+
+                <div class="about-point">
+                    <span class="check-icon">✓</span>
+                    <span>Moral Development</span>
+                </div>
+
+                <div class="about-point">
+                    <span class="check-icon">✓</span>
+                    <span>Student Growth</span>
+                </div>
+
+                <div class="about-point">
+                    <span class="check-icon">✓</span>
+                    <span>Community Service</span>
+                </div>
+            </div>
+
+            <a href="#academics" class="btn btn-primary">
+                Learn About Our Education →
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- MISSION AND VALUES -->
+<section class="section section-soft">
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <div class="eyebrow">Our Foundation</div>
+            <h2>What We Stand For</h2>
+            <p>
+                Our educational approach is built on faith, understanding
+                and the development of good character.
+            </p>
+        </div>
+
+        <div class="mission-grid">
+
+            <article class="mission-card reveal">
+                <div class="mission-icon">☪</div>
+                <h3>Faith & Spirituality</h3>
+                <p>
+                    Encouraging students to understand Islamic teachings
+                    and develop a meaningful connection with their faith.
+                </p>
+            </article>
+
+            <article class="mission-card reveal">
+                <div class="mission-icon">📖</div>
+                <h3>Knowledge & Learning</h3>
+                <p>
+                    Supporting a love of learning through Islamic studies,
+                    Arabic language and the pursuit of beneficial knowledge.
+                </p>
+            </article>
+
+            <article class="mission-card reveal">
+                <div class="mission-icon">♡</div>
+                <h3>Character & Compassion</h3>
+                <p>
+                    Promoting honesty, respect, responsibility, kindness
+                    and good conduct in everyday life.
+                </p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- SADAR USTHAD MESSAGE -->
+<section class="section">
+    <div class="container message-grid">
+
+        <div class="message-photo reveal">
+            <!--
+              TO ADD THE SADAR USTHAD'S PHOTO:
+              Replace this background image using your own image URL
+              in the .message-photo CSS rule.
+            -->
+
+            <div class="photo-label">
+                <strong>Shameer Nizami</strong>
+                <span>Sadar Usthad</span>
+            </div>
+        </div>
+
+        <div class="message-copy reveal">
+
+            <div class="quote-mark">“</div>
+
+            <div class="eyebrow">A Message of Guidance</div>
+
+            <h2>Education That Shapes Both Knowledge and Character</h2>
+
+            <p>
+                At Rahmaniyya, we believe that the true purpose of education
+                is to nurture minds, strengthen faith and build character.
+                Every student carries the potential to contribute positively
+                to family, society and the wider world.
+            </p>
+
+            <p>
+                Our commitment is to guide students with sincerity,
+                patience and responsibility, helping them grow into
+                knowledgeable, respectful and compassionate individuals.
+            </p>
+
+            <p>
+                May Allah bless our students, teachers, parents and all
+                those who contribute to the continued success of our institution.
+            </p>
+
+            <strong style="color:var(--green);font-size:14px;">
+                — Shameer Nizami
+            </strong>
+
+            <div style="font-size:12px;color:var(--muted);margin-top:3px;">
+                Sadar Usthad, Rahmaniyya Higher Secondary Madrasa
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ACADEMICS -->
+<section class="section section-soft" id="academics">
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <div class="eyebrow">Learning at Rahmaniyya</div>
+            <h2>Our Academic Journey</h2>
+            <p>
+                A structured learning journey designed to strengthen
+                foundational knowledge and encourage continuous growth.
+            </p>
+        </div>
+
+        <div class="academic-grid">
+
+            <article class="academic-card reveal">
+                <div class="academic-number">01</div>
+                <h3>Foundation Classes</h3>
+                <p>
+                    Building essential foundations in Islamic knowledge,
+                    reading, writing, manners and everyday religious practice.
+                </p>
+                <span class="academic-tag">CLASSES 1–4</span>
+            </article>
+
+            <article class="academic-card reveal">
+                <div class="academic-number">02</div>
+                <h3>Intermediate Learning</h3>
+                <p>
+                    Developing a deeper understanding of Islamic subjects,
+                    Arabic and moral responsibilities through guided learning.
+                </p>
+                <span class="academic-tag">CLASSES 5–7</span>
+            </article>
+
+            <article class="academic-card reveal">
+                <div class="academic-number">03</div>
+                <h3>Higher Studies</h3>
+                <p>
+                    Encouraging advanced understanding, independent thinking,
+                    discipline and the practical application of knowledge.
+                </p>
+                <span class="academic-tag">CLASSES 8–11</span>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- STATISTICS -->
+<section class="stats-section">
+    <div class="container stats-grid">
+
+        <div class="stat-item reveal">
+            <strong>1959</strong>
+            <span>Year of Establishment</span>
+        </div>
+
+        <div class="stat-item reveal">
+            <strong>11</strong>
+            <span>Classes</span>
+        </div>
+
+        <div class="stat-item reveal">
+            <strong>1126</strong>
+            <span>SKIMVB Reg. No.</span>
+        </div>
+
+        <div class="stat-item reveal">
+            <strong>65+</strong>
+            <span>Years of Service</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- COMMITTEE -->
+<section class="section" id="committee">
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <div class="eyebrow">Our Leadership</div>
+            <h2>Institutional Committee</h2>
+            <p>
+                Dedicated individuals working together to support the
+                institution's educational mission and continued development.
+            </p>
+        </div>
+
+        <div class="leadership-grid">
+
+            <!-- COMMITTEE MEMBER 1 -->
+            <article class="person-card reveal">
+                <div class="person-image">
+                    <div class="person-placeholder">♙</div>
+                </div>
+                <div class="person-info">
+                    <h3>Chairman Name</h3>
+                    <p>Add the chairman's details here.</p>
+                    <span class="person-role">CHAIRMAN</span>
+                </div>
+            </article>
+
+            <!-- COMMITTEE MEMBER 2 -->
+            <article class="person-card reveal">
+                <div class="person-image">
+                    <div class="person-placeholder">♙</div>
+                </div>
+                <div class="person-info">
+                    <h3>President Name</h3>
+                    <p>Add the president's details here.</p>
+                    <span class="person-role">PRESIDENT</span>
+                </div>
+            </article>
+
+            <!-- COMMITTEE MEMBER 3 -->
+            <article class="person-card reveal">
+                <div class="person-image">
+                    <div class="person-placeholder">♙</div>
+                </div>
+                <div class="person-info">
+                    <h3>Secretary Name</h3>
+                    <p>Add the secretary's details here.</p>
+                    <span class="person-role">SECRETARY</span>
+                </div>
+            </article>
+
+            <!-- COMMITTEE MEMBER 4 -->
+            <article class="person-card reveal">
+                <div class="person-image">
+                    <div class="person-placeholder">♙</div>
+                </div>
+                <div class="person-info">
+                    <h3>Treasurer Name</h3>
+                    <p>Add the treasurer's details here.</p>
+                    <span class="person-role">TREASURER</span>
+                </div>
+            </article>
+
+            <!-- COMMITTEE MEMBER 5 -->
+            <article class="person-card reveal">
+                <div class="person-image">
+                    <div class="person-placeholder">♙</div>
+                </div>
+                <div class="person-info">
+                    <h3>Committee Member</h3>
+                    <p>Add the member's details here.</p>
+                    <span class="person-role">COMMITTEE MEMBER</span>
+                </div>
+            </article>
+
+            <!-- COMMITTEE MEMBER 6 -->
+            <article class="person-card reveal">
+                <div class="person-image">
+                    <div class="person-placeholder">♙</div>
+                </div>
+                <div class="person-info">
+                    <h3>Committee Member</h3>
+                    <p>Add the member's details here.</p>
+                    <span class="person-role">COMMITTEE MEMBER</span>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- TEACHERS -->
+<section class="section section-soft" id="teachers">
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <div class="eyebrow">Our Educators</div>
+            <h2>Meet Our Teachers</h2>
+            <p>
+                Our teachers play an important role in guiding students
+                towards knowledge, discipline and good character.
+            </p>
+        </div>
+
+        <div class="teacher-grid">
+
+            <!-- TEACHER 1 -->
+            <article class="teacher-card reveal">
+                <div class="teacher-avatar">♙</div>
+                <h3>Shameer Nizami</h3>
+                <p>Sadar Usthad</p>
+            </article>
+
+            <!-- TEACHER 2 -->
+            <article class="teacher-card reveal">
+                <div class="teacher-avatar">♙</div>
+                <h3>Teacher Name</h3>
+                <p>Usthad</p>
+            </article>
+
+            <!-- TEACHER 3 -->
+            <article class="teacher-card reveal">
+                <div class="teacher-avatar">♙</div>
+                <h3>Teacher Name</h3>
+                <p>Usthad</p>
+            </article>
+
+            <!-- TEACHER 4 -->
+            <article class="teacher-card reveal">
+                <div class="teacher-avatar">♙</div>
+                <h3>Teacher Name</h3>
+                <p>Usthad</p>
+            </article>
+
+            <!-- TEACHER 5 -->
+            <article class="teacher-card reveal">
+                <div class="teacher-avatar">♙</div>
+                <h3>Teacher Name</h3>
+                <p>Usthad</p>
+            </article>
+
+            <!-- TEACHER 6 -->
+            <article class="teacher-card reveal">
+                <div class="teacher-avatar">♙</div>
+                <h3>Teacher Name</h3>
+                <p>Usthad</p>
+            </article>
+
+            <!-- TEACHER 7 -->
+            <article class="teacher-card reveal">
+                <div class="teacher-avatar">♙</div>
+                <h3>Teacher Name</h3>
+                <p>Usthad</p>
+            </article>
+
+            <!-- TEACHER 8 -->
+            <article class="teacher-card reveal">
+                <div class="teacher-avatar">♙</div>
+                <h3>Teacher Name</h3>
+                <p>Usthad</p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section" id="gallery">
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <div class="eyebrow">Life at Rahmaniyya</div>
+            <h2>Our Gallery</h2>
+            <p>
+                A glimpse of educational activities, celebrations,
+                student participation and memorable moments.
+            </p>
+        </div>
+
+        <div class="gallery-grid">
+
+            <!-- GALLERY IMAGE 1 -->
+            <div class="gallery-item reveal">
+                <img
+                    src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80"
+                    alt="Educational activities"
+                    loading="lazy">
+                <div class="gallery-overlay">
+                    <span>Education</span>
+                    <h3>Learning Together</h3>
+                </div>
+            </div>
+
+            <!-- GALLERY IMAGE 2 -->
+            <div class="gallery-item reveal">
+                <img
+                    src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=80"
+                    alt="Students in a classroom"
+                    loading="lazy">
+                <div class="gallery-overlay">
+                    <span>Academics</span>
+                    <h3>Classroom Moments</h3>
+                </div>
+            </div>
+
+            <!-- GALLERY IMAGE 3 -->
+            <div class="gallery-item reveal">
+                <img
+                    src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=80"
+                    alt="Students participating together"
+                    loading="lazy">
+                <div class="gallery-overlay">
+                    <span>Community</span>
+                    <h3>Growing Together</h3>
+                </div>
+            </div>
+
+            <!-- GALLERY IMAGE 4 -->
+            <div class="gallery-item reveal">
+                <img
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+                    alt="Learning and reading"
+                    loading="lazy">
+                <div class="gallery-overlay">
+                    <span>Knowledge</span>
+                    <h3>A Love for Learning</h3>
+                </div>
+            </div>
+
+            <!-- GALLERY IMAGE 5 -->
+            <div class="gallery-item reveal">
+                <img
+                    src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=800&q=80"
+                    alt="Group educational activities"
+                    loading="lazy">
+                <div class="gallery-overlay">
+                    <span>Activities</span>
+                    <h3>Memories Together</h3>
+                </div>
+            </div>
+
+            <!-- GALLERY IMAGE 6 -->
+            <div class="gallery-item reveal">
+                <img
+                    src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80"
+                    alt="Educational environment"
+                    loading="lazy">
+                <div class="gallery-overlay">
+                    <span>Our Journey</span>
+                    <h3>Building the Future</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="text-align:center;margin-top:32px;">
+            <a
+                href="https://www.instagram.com/rahmaniya1126/"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-primary">
+                Follow Our Instagram ↗
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT CALL TO ACTION -->
+<section class="section section-soft">
+    <div class="container">
+
+        <div class="cta-banner reveal">
+
+            <div>
+                <h2>Be Part of the Rahmaniyya Journey</h2>
+                <p>
+                    Connect with our institution to learn more about
+                    our educational activities, programs and community.
+                </p>
+            </div>
+
+            <div class="cta-actions">
+                <a
+                    href="https://www.instagram.com/rahmaniya1126/"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-gold">
+                    Instagram ↗
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Contact Us
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+    <div class="container">
+
+        <div class="section-heading reveal">
+            <div class="eyebrow">Get in Touch</div>
+            <h2>Contact Rahmaniyya</h2>
+            <p>
+                We welcome enquiries from parents, students,
+                well-wishers and members of our community.
+            </p>
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-details">
+
+                <div class="contact-card reveal">
+                    <div class="contact-icon">⌖</div>
+                    <div>
+                        <h3>Our Location</h3>
+                        <p>
+                            Rahmaniyya Higher Secondary Madrasa,<br>
+                            Olavilam P.O., Kerala 673313, India.
+                        </p>
+                        <a
+                            href="https://www.google.com/maps/search/?api=1&query=Rahmaniyya+Higher+Secondary+Madrasa+Olavilam"
+                            target="_blank"
+                            rel="noopener">
+                            Get Directions ↗
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-card reveal">
+                    <div class="contact-icon">✉</div>
+                    <div>
+                        <h3>Institution Details</h3>
+                        <p>SKIMVB Registration Number: 1126</p>
+                        <p>Established: 9 November 1959</p>
+                    </div>
+                </div>
+
+                <div class="contact-card reveal">
+                    <div class="contact-icon">◎</div>
+                    <div>
+                        <h3>Instagram</h3>
+                        <p>Follow our institution's activities and updates.</p>
+                        <a
+                            href="https://www.instagram.com/rahmaniya1126/"
+                            target="_blank"
+                            rel="noopener">
+                            @rahmaniya1126 ↗
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-card reveal">
+                    <div class="contact-icon">☪</div>
+                    <div>
+                        <h3>Institution Head</h3>
+                        <p>Sadar Usthad: Shameer Nizami</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="map-container reveal">
+                <iframe
+                    src="https://maps.google.com/maps?q=Rahmaniyya%20Higher%20Secondary%20Madrasa%20Olavilam&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                    title="Map showing Rahmaniyya Higher Secondary Madrasa, Olavilam"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+                    <div class="brand-mark">R</div>
+                    <div>
+                        <strong>Rahmaniyya</strong>
+                        <span>Higher Secondary Madrasa · Olavilam</span>
+                    </div>
+                </div>
+
+                <p class="footer-about">
+                    Established in 1959, Rahmaniyya Higher Secondary
+                    Madrasa is committed to Islamic education, character
+                    development and service to the community.
+                </p>
+
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#academics">Academics</a></li>
+                    <li><a href="#committee">Committee</a></li>
+                    <li><a href="#teachers">Teachers</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact Information</h3>
+
+                <ul class="footer-links">
+                    <li>Olavilam P.O., Kerala 673313</li>
+                    <li>SKIMVB Reg. No. 1126</li>
+                    <li>Established 9 November 1959</li>
+                    <li>
+                        <a
+                            href="https://www.instagram.com/rahmaniya1126/"
+                            target="_blank"
+                            rel="noopener">
+                            Instagram Profile ↗
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.google.com/maps/search/?api=1&query=Rahmaniyya+Higher+Secondary+Madrasa+Olavilam"
+                            target="_blank"
+                            rel="noopener">
+                            Find Us on Google Maps ↗
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span>
+                © <span id="currentYear">2026</span>
+                Rahmaniyya Higher Secondary Madrasa. All rights reserved.
+            </span>
+
+            <span>
+                Knowledge · Faith · Character
+            </span>
+        </div>
+
+    </div>
+</footer>
+
+<!-- FLOATING QUICK LINKS -->
+<div class="floating-buttons">
+
+    <a
+        class="float-btn float-instagram"
+        href="https://www.instagram.com/rahmaniya1126/"
+        target="_blank"
+        rel="noopener"
+        aria-label="Visit our Instagram"
+        title="Instagram">
+        ◎
+    </a>
+
+    <a
+        class="float-btn float-location"
+        href="https://www.google.com/maps/search/?api=1&query=Rahmaniyya+Higher+Secondary+Madrasa+Olavilam"
+        target="_blank"
+        rel="noopener"
+        aria-label="Find our location"
+        title="Location">
+        ⌖
+    </a>
+
+</div>
+
+<button
+    class="back-to-top"
+    id="backToTop"
+    aria-label="Back to top"
+    title="Back to top">
+    ↑
+</button>
+
+<!-- IMAGE LIGHTBOX -->
+<div class="lightbox" id="lightbox" aria-label="Gallery image viewer">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image">
+        &times;
+    </button>
+    <img src="" alt="Enlarged gallery image" id="lightboxImage">
+</div>
+
+<script>
+/* =====================================================
+   WEBSITE INTERACTIONS
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const header = document.getElementById("siteHeader");
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    const backToTop = document.getElementById("backToTop");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxClose = document.getElementById("lightboxClose");
+
+    // Automatically update copyright year
+    document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+
+    // Mobile navigation
+    function closeMenu() {
+        navLinks.classList.remove("open");
+        document.body.classList.remove("menu-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+        menuToggle.textContent = "☰";
+    }
+
+    menuToggle.addEventListener("click", function () {
+        const isOpen = navLinks.classList.toggle("open");
+
+        document.body.classList.toggle("menu-open", isOpen);
+
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+
+        menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    // Close mobile menu after selecting a section
+    navLinks.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            closeMenu();
+        });
+    });
+
+    // Close mobile menu with Escape
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            closeMenu();
+            closeLightbox();
+        }
+    });
+
+    // Header shadow and back-to-top visibility
+    function handleScroll() {
+        if (window.scrollY > 30) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+
+        if (window.scrollY > 450) {
+            backToTop.classList.add("visible");
+        } else {
+            backToTop.classList.remove("visible");
+        }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    // Back-to-top button
+    backToTop.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+    // Reveal elements as they enter the viewport
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+
+        const revealObserver = new IntersectionObserver(
+            function (entries, observer) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+        revealElements.forEach(function (element) {
+            revealObserver.observe(element);
+        });
+
+    } else {
+        revealElements.forEach(function (element) {
+            element.classList.add("visible");
+        });
+    }
+
+    // Highlight the active navigation section
+    const sections = document.querySelectorAll("main section[id]");
+    const navItems = document.querySelectorAll(
+        '#navLinks a[href^="#"]'
+    );
+
+    if ("IntersectionObserver" in window) {
+
+        const sectionObserver = new IntersectionObserver(
+            function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+
+                        const sectionId = entry.target.getAttribute("id");
+
+                        navItems.forEach(function (link) {
+                            link.classList.toggle(
+                                "active",
+                                link.getAttribute("href") === "#" + sectionId
+                            );
+                        });
+                    }
+                });
+            },
+            {
+                rootMargin: "-25% 0px -60% 0px"
+            }
+        );
+
+        sections.forEach(function (section) {
+            sectionObserver.observe(section);
+        });
+    }
+
+    // Gallery lightbox
+    document.querySelectorAll(".gallery-item img").forEach(function (image) {
+
+        image.addEventListener("click", function () {
+            lightboxImage.src = image.src;
+            lightboxImage.alt = image.alt;
+            lightbox.classList.add("open");
+            document.body.style.overflow = "hidden";
+        });
+
+    });
+
+    function closeLightbox() {
+        lightbox.classList.remove("open");
+        document.body.style.overflow = "";
+    }
+
+    lightboxClose.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", function (event) {
+        if (event.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+});
+</script>
+
+</body>
+</html>
